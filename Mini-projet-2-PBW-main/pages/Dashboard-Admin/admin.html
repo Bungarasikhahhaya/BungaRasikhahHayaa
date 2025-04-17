@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <base href="https://cs.usk.ac.id/~mhs/pbw_kelompok_6/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="css/Dashboard-Admin/styles.css">
+    <script src="js/Dashboard-Admin/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <button class="toggle-sidebar">
+                <img src="assets/images/navbar/menu.svg" alt="Toggle Sidebar" class="toggle-icon">
+            </button>
+            <div class="profile-section">
+                <div class="profile-img">
+                    <img src="assets/images/image/Firah.png" alt="Profile Image">
+                </div>
+                <div class="profile-info">
+                    <h3>Firah Maulida</h3>
+                    <p>Firmann@admin.com</p>
+                </div>
+            </div>
+            
+            <div class="sidebar-title"><b>Tentang Kami</b></div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">
+                        <i class="fas fa-home"></i>
+                        <span><b>Dashboard</b></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/Add-user/index.html" class="nav-link">
+                        <i class="fas fa-user"></i>
+                        <span><b>Add User</b></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/List-user/User.html" class="nav-link">
+                        <i class="fas fa-user"></i>
+                        <span><b>List User</b></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/EditProfile/editprofile.html" class="nav-link">
+                        <i><img src="assets/images/navbar/setting.png" alt=""></i>
+                        <span><b>Pengaturan</b></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="main-header">
+                <h1 class="panel-title">Admin <span>Panel</span></h1>
+                 
+                <div class="header-nav">
+                    <a href="/~mhs/pbw_kelompok_6/index.html"><b>Home</b></a>
+                </div>
+                <button class="menu-toggle">☰</button>
+            </div>
+            
+            <div class="kotak">
+                <!-- Stats Cards -->
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <h3 class="stat-title">Users</h3>
+                        <div class="stat-value">128</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <h3 class="stat-title">New User</h3>
+                        <div class="stat-value">28</div>
+                        <div class="stat-subtitle">this month</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 45%;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <h3 class="stat-title">Activity Level</h3>
+                        <div class="stat-value">78%</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 78%;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Activity Section -->
+                <div class="activity-section">
+                    <h2 class="section-title">Recent Activity</h2>
+                    
+                    <ul class="activity-list">
+                        <li class="activity-item">
+                            <div class="activity-icon icon-new-user"></div>
+                            <div class="activity-content">
+                                <h4 class="activity-title">New user registers</h4>
+                                <p class="activity-time">5 minutes ago</p>
+                            </div>
+                        </li>
+                        
+                        <li class="activity-item">
+                            <div class="activity-icon icon-admin"></div>
+                            <div class="activity-content">
+                                <h4 class="activity-title">Admin Changes the Rules</h4>
+                                <p class="activity-time">45 minutes ago</p>
+                            </div>
+                        </li>
+                        
+                        <li class="activity-item">
+                            <div class="activity-icon icon-system"></div>
+                            <div class="activity-content">
+                                <h4 class="activity-title">System update successful</h4>
+                                <p class="activity-time">3 hours ago</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

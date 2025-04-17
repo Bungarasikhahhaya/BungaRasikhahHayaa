@@ -1,0 +1,1131 @@
+:root {
+    --primary: #1b7d73;
+    --secondary: #00b89c;
+    --accent: #ffc857;
+    --text-light: #ffffff;
+    --text-dark: #2c3e50;
+    --gradient: linear-gradient(120deg, #00b89c, #1b7d73);
+    --button-gradient: linear-gradient(90deg, #00b89c, #1b7d73);
+    --light-bg: #f9f9f9;
+    --cream: #f8ecc2;
+    --mint: #7de2d1;
+    --teal: #1b7d73;
+    --pastel-blue: rgba(87, 190, 168, 1);
+    --pastel-yellow: rgba(226, 218, 166, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    color: var(--text-dark);
+    background-color: var(--light-bg);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary);
+    color: var(--text-light);
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.logo img {
+    height: 30px;
+    margin-right: 8px;
+}
+
+
+
+.ls{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 3px;
+}
+
+.toggle-option {
+    padding: 5px 12px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.toggle-active {
+    background-color: var(--text-light);
+    color: var(--primary);
+}
+
+/* Hero Section */
+.hero {
+    background-color: var(--primary);
+    color: var(--text-light);
+    padding: 4rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: var(--accent);
+}
+
+.hero p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--button-gradient);
+    color: var(--text-light);
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.hero-image {
+    position: absolute;
+    right: 0;
+    top: 160px;
+    transform: translateY(-50%);
+    width: 25em;
+    z-index: 1;
+}
+
+.hero-shape {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #f9f9f9;
+    border-radius: 100% 100% 0 0;
+}
+
+/* Features Section */
+.features {
+    position: relative;
+}
+
+.feature-item {
+    background-color: white;
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 1rem 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.feature-icon {
+    background: var(--gradient);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.feature-text h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+/* App Section */
+.app-section {
+    background: var(--gradient);
+    color: var(--text-light);
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 100px 0 0;
+}
+
+.app-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.app-text {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.app-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.app-text p {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.app-devices {
+    flex: 1;
+    position: relative;
+}
+
+.device {
+    max-width: 100%;
+    display: block;
+}
+
+.phone-mockup {
+    position: absolute;
+    bottom: -100px;
+    right: 0;
+    width: 60%;
+    z-index: 2;
+}
+
+/* Planning Section */
+.planning-section {
+    padding: 5rem 0;
+    background-color: #f9f9f9;
+}
+
+.planning-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.planning-header h2 {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.step-item {
+    background-color: white;
+    border-radius: 15px;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.step-number {
+    background-color: var(--secondary);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.device-images {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    position: relative;
+}
+
+.device-images img {
+    max-width: 200px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* NEW SECTIONS FROM IMAGE */
+
+/* Penawaran Kami Section */
+.penawaran-section {
+    padding: 5rem 0;
+    text-align: center;
+    background-color: var(--light-bg);
+}
+
+.section-title {
+    font-size: 2.2rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.section-description {
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.offerings-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.offering-card {
+    background-image: url(/assets/images/Rectangle\ 20.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    padding: 2rem;
+    width: 300px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.offering-card:hover {
+    transform: translateY(-10px);
+}
+
+.offering-icon {
+    width: 80px;
+    height: 80px;
+    background-color: #cfebe7;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+}
+
+.offering-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.offering-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Fitur Kami Section */
+.fitur-section {
+    padding: 5rem 0;
+    background-color: var(--light-bg);
+}
+
+.fitur-header {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.fitur-description {
+    max-width: 700px;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+.fitur-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.fitur-card {
+    /* background-color: #e8f5f3; */
+    background-image: url(/assets/images/Rectangle\ 20.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 35px;
+    padding: 1.5rem;
+    width: 230px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.fitur-icon-img {
+    width: 100px;  /* Sesuaikan ukuran sesuai kebutuhan */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.fitur-card:hover {
+    transform: translateY(-5px);
+}
+
+.fitur-icon {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.fitur-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    color: var(--primary);
+}
+
+/* Keunggulan Section */
+.keunggulan-section {
+    padding: 5rem 0;
+    background-color: #d7ede9;
+    border-radius: 30px;
+    margin: 3rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.keunggulan-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.keunggulan-title {
+    font-size: 2.2rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.keunggulan-subtitle {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.keunggulan-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.keunggulan-card {
+    background-color: var(--cream);
+    border-radius: 15px;
+    padding: 1.2rem;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.check-icon {
+    width: 30px;
+    height: 30px;
+    background-color: var(--secondary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1rem;
+}
+
+.circle-bg {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: 1;
+}
+
+.circle-bg-1 {
+    top: -100px;
+    left: -100px;
+}
+
+.circle-bg-2 {
+    bottom: -100px;
+    right: -100px;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 5rem 0;
+    background-color: var(--light-bg);
+}
+
+.faq-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-toggle {
+    width: 24px;
+    height: 24px;
+    background-color: var(--secondary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+}
+
+/* Team Section (NEW) */
+.team-section {
+    background-color: var(--light-bg);
+    position: relative;
+}
+
+.team-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.team-title {
+    font-size: 2.2rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.team-title::before,
+.team-title::after {
+    content: "💰";
+    position: absolute;
+    top: 0;
+    font-size: 1.8rem;
+}
+
+.team-title::before {
+    left: -40px;
+}
+
+.team-title::after {
+    right: -40px;
+}
+
+.team-members {
+    position: relative;
+    width: 100%;
+    padding: 0 1rem;
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 0.8;
+}
+
+.member-row {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.member-card {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.member-card.right {
+    flex-direction: row-reverse;
+}
+
+.member-info {
+    width: 50%;
+    z-index: 1;
+}
+
+.team{
+    background-color: blue;
+}
+
+.member-bubble {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-dark);
+    position: relative;
+}
+
+.member-bubble img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.bubble-mint {
+    background-color: var(--pastel-yellow);
+}
+
+.bubble-teal {
+    background-color: var(--pastel-blue);
+}
+
+.bubble-yellow {
+    background-color: var(--pastel-blue);
+}
+
+.member-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 0.3rem;
+}
+
+.member-id {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.responsibility-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.responsibility-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.responsibility-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--secondary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.responsibility-item.alt {
+    background-color: var(--pastel-blue);
+    color: var(--text-dark);
+}
+
+.check {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    color: var(--secondary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.check.alt {
+    background-color: var(--secondary);
+    color: white;
+}
+
+/* Wavy Backgrounds */
+.wave-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave-bottom svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 127px;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 60px 0 30px;
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+    margin-bottom: 30px;
+}
+
+.footer-logo-img {
+    width: 50px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.footer-logo-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+    padding-right: 20px;
+}
+
+.footer-column h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-column h4:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #00b894; /* Warna aksen yang cocok dengan desain CuanFlow */
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    color: #cccccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #00b894; /* Warna aksen saat hover */
+}
+
+.footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.copyright {
+    font-size: 14px;
+    color: #888888;
+}
+
+.social-links {
+    display: flex;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    margin-left: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #00b894; /* Warna aksen saat hover */
+}
+
+/* Responsif untuk layar kecil */
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+    }
+    
+    .footer-column {
+        width: 100%;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .social-links {
+        margin-top: 20px;
+        justify-content: center;
+    }
+    
+    .social-icon {
+        margin: 0 5px;
+    }
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-image {
+        width: 100%;
+        position: static;
+        transform: none;
+        margin-top: 2rem;
+    }
+    
+    .app-content {
+        flex-direction: column;
+    }
+    
+    .app-text {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+    
+    .offerings-container,
+    .fitur-cards,
+    .keunggulan-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .offering-card,
+    .fitur-card,
+    .keunggulan-card {
+        width: 90%;
+    }
+    
+    .member-card, 
+    .member-card.right {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .member-info {
+        width: 100%;
+        margin-top: 2rem;
+    }
+    
+    .responsibility-list {
+        align-items: center;
+    }
+}
+
+/* Tambahkan kode CSS berikut ke file CSS Anda */
+
+/* Animasi fade-in dan slide-up (yang sudah ada di JS) */
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+.slide-up {
+    animation: slideUp 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ANIMASI BARU: Logo Pulse */
+.logo-pulse {
+    animation: logoPulse 2s infinite ease-in-out;
+}
+
+@keyframes logoPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* ANIMASI BARU: Animated Background untuk Hero */
+.animated-bg {
+    position: relative;
+    overflow: hidden;
+}
+
+.animated-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+                rgba(27, 125, 115, 0.3) 25%, 
+                rgba(0, 184, 156, 0.3) 50%, 
+                rgba(27, 125, 115, 0.3) 75%);
+    animation: wave 8s linear infinite;
+    z-index: 0;
+}
+
+@keyframes wave {
+    0% { transform: translateX(-25%); }
+    100% { transform: translateX(25%); }
+}
+
+/* ANIMASI BARU: Pop effect untuk cards */
+.card-pop {
+    animation: pop 0.3s ease forwards;
+}
+
+.card-pop-out {
+    animation: popOut 0.3s ease forwards;
+}
+
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1.03); }
+}
+
+@keyframes popOut {
+    0% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+/* ANIMASI BARU: Rotating team member images */
+.rotate-on-scroll {
+    transition: transform 0.5s ease;
+    transform-style: preserve-3d;
+}
+
+/* ANIMASI BARU: Button glow effect */
+.cta-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.cta-button:hover::after {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* ANIMASI BARU: Bounce effect for icons */
+.offering-icon, .fitur-icon, .feature-icon, .check-icon {
+    animation: bounce 2s infinite;
+    animation-delay: calc(var(--animation-order, 0) * 0.2s);
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+/* ANIMASI BARU: Text color gradient animation */
+.section-title {
+    background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent), var(--primary));
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientText 5s ease infinite;
+}
+
+@keyframes gradientText {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ANIMASI BARU: Floating elements */
+.hero-image {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(-50%) translateX(0); }
+    50% { transform: translateY(-50%) translateX(-10px); }
+    100% { transform: translateY(-50%) translateX(0); }
+}
+
+/* ANIMASI BARU: Typing cursor for hero text */
+.typing-cursor {
+    display: inline-block;
+    width: 3px;
+    height: 1em;
+    background-color: var(--text-light);
+    animation: blink 1s infinite;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* ANIMASI BARU: Spotlight hover effect for cards */
+.offering-card::before, .fitur-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), 
+                rgba(255, 255, 255, 0.3) 0%, 
+                rgba(255, 255, 255, 0) 60%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    border-radius: inherit;
+    pointer-events: none;
+}
+
+.offering-card:hover::before, .fitur-card:hover::before {
+    opacity: 1;
+}
+
+.typewriter-text::after {
+    content: '|';
+    animation: blink 0.7s infinite;
+    color: #333;
+    margin-left: 2px;
+  }
+  
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  
+  

@@ -1,0 +1,225 @@
+/* Reset & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background Image */
+body {
+    background: url('https://cs.usk.ac.id/~mhs/pbw_kelompok_6/assets/Background.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.bp{
+    color: white;
+    text-decoration: none;
+}
+
+/* Navbar Atas */
+.top-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #22c1c3, #fdbb2d);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    color: white;
+    font-size: 18px;
+    z-index: 1000;
+}
+
+.top-navbar .logo {
+    font-weight: bold;
+}
+
+.top-navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.top-navbar .nav-links li {
+    margin: 0 15px;
+}
+
+.top-navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.top-navbar .nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Navbar Samping */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background: rgba(44, 62, 80, 0.9);
+    padding-top: 80px;
+    color: white;
+    transition: width 0.3s;
+}
+
+.sidebar .profile-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.sidebar .profile-section img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    padding: 15px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sidebar-menu li:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-menu li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+/* Container dengan latar belakang putih */
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 30px 40px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Profil */
+.profile-header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info h2 {
+    margin-bottom: 5px;
+}
+
+/* Form */
+.form-section {
+    margin-bottom: 30px;
+}
+
+.form-section-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+/* Tombol */
+.btn {
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.btn-cancel {
+    background-color: #e74c3c;
+}
+
+.btn-cancel:hover {
+    background-color: #c0392b;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        width: 95%;
+    }
+    .sidebar {
+        width: 200px;
+    }
+}

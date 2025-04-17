@@ -1,0 +1,136 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>     
+    <meta charset="UTF-8">     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">     
+    <title>Admin Dashboard</title>
+    <base href="https://cs.usk.ac.id/~mhs/pbw_kelompok_6/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="css/ProfileAdmin/ProfileAdmin.css">     
+    <script src="js/ProfileAdmin/ProfileAdmin.js"></script> 
+</head> 
+<body>     
+    <div class="container">         
+        <!-- Sidebar -->         
+        <div class="sidebar">             
+            <button class="toggle-sidebar">                 
+                <img src="assets/images/navbar/menu.svg" alt="Toggle Sidebar" class="toggle-icon">             
+            </button>             
+            <div class="profile-section">                 
+                <div class="profile-img">                     
+                    <img src="assets/images/image/razian.png" alt="Profile Image">                 
+                </div>                 
+                <div class="profile-info">                     
+                    <h3>Firah Maulida</h3>                     
+                    <p>Firmann@admin.com</p>                 
+                </div>   
+                </button>
+                    </button>
+            </div>                          
+            <div class="sidebar-title"><b>Tentang Kami</b></div>                          
+            <ul class="nav-menu">                 
+                <li class="nav-item">
+                    <a href="pages/Dashboard-Admin/admin.html" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        <span><b>Dashboard</b></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/Add-user/index.html" class="nav-link">
+                        <i class="fas fa-user"></i>
+                        <span><b>Add User</b></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/List-user/User.html" class="nav-link">
+                        <i class="fas fa-user"></i>
+                        <span><b>List User</b></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/EditProfile/editprofile.html" class="nav-link active">
+                        <img src="assets/images/navbar/setting.png" alt="Settings">
+                        <span><b>Pengaturan</b></span>
+                    </a>
+                </li>
+            </ul>         
+        </div>                  
+        <!-- Main Content -->         
+        <div class="main-content">             
+            <div class="main-header">                 
+                <h1 class="panel-title">Admin <span>Panel</span></h1>                                  
+                <div class="header-nav">
+                    <a href="/~mhs/pbw_kelompok_6/index.html"><b>Home</b></a>                 
+                </div>                 
+                <button class="menu-toggle">☰</button>             
+            </div>
+            
+            <!-- Add Profile Card -->
+            <div class="profile-card">  
+                <div class="profile-header">
+                    <div class="profile-avatar">
+                        <img src="https://cs.usk.ac.id/~mhs/pbw_kelompok_6/assets/images/image/Firah.png" alt="Profile Image">
+                    </div>
+                    <div class="profile-info-header">
+                        <h3>Firah Maulida</h3>
+                        <p>Admin CashFlow</p>
+                        <p>Banda Aceh, Lhangugob</p>
+                    </div>
+                </div>
+                
+                <div class="profile-details">
+                    <div class="profile-item">
+                        <div class="profile-label">Personal Meeting Id</div>
+                        <div class="profile-value">
+                            <span>231-342-3245</span>
+                            <p class="profile-link">https://callme/231-342-3245</p>
+                        </div>
+                        <div class="profile-edit"><a href="#">Edit</a></div>
+                    </div>
+                    
+                    <div class="profile-item">
+                        <div class="profile-label">Email</div>
+                        <div class="profile-value">
+                            <a href="mailto:Firmann@admin.com">Firmann@admin.com</a>
+                        </div>
+                        <div class="profile-edit"><a href="#">Edit</a></div>
+                    </div>
+                    
+                    <div class="profile-item">
+                        <div class="profile-label">Subscription Type</div>
+                        <div class="profile-value">
+                            <span>Free Admin</span>
+                            <a href="#" class="access-link">Access</a>
+                        </div>
+                        <div class="profile-edit"><a href="#">Edit</a></div>
+                    </div>
+                    
+                    <div class="profile-item">
+                        <div class="profile-label">Time Zone</div>
+                        <div class="profile-value">
+                            <span>(UTC+7)Indonesia, Banda Aceh</span>
+                        </div>
+                        <div class="profile-edit"><a href="#">Edit</a></div>
+                    </div>
+                    
+                    <div class="profile-item">
+                        <div class="profile-label">Language</div>
+                        <div class="profile-value">
+                            <span>English</span>
+                        </div>
+                        <div class="profile-edit"><a href="#">Edit</a></div>
+                    </div>
+                    
+                    <div class="profile-item">
+                        <div class="profile-label">Password</div>
+                        <div class="profile-value">
+                            <span>***********</span>
+                        </div>
+                        <div class="profile-edit"><a href="#">Edit</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>     
+    </div> 
+</body> 
+</html>

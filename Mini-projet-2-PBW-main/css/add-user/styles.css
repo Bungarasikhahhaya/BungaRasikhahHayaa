@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background: radial-gradient(circle at 70% 30%, rgba(70, 252, 200, 0.8) 0%, rgba(24, 209, 160, 0.9) 40%, rgba(24, 90, 157, 0.8) 100%), 
+                linear-gradient(45deg, rgba(255, 236, 179, 0.3) 0%, rgba(67, 206, 162, 0.5) 50%, rgba(24, 90, 157, 0.4) 100%);
+    color: #333;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.kotak{
+    padding: 50px;
+    background-color: rgba(165, 237, 211, 0.96);
+    border-radius: 30px;
+}
+
+/* Toggle button */
+.toggle-sidebar {
+    position: absolute;
+    top: 10px;
+    right: -15px;
+    width: 30px;
+    height: 30px;
+    background-color: #3e866a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+
+
+/* Sidebar styles */
+.sidebar {
+    width: 280px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 0 30px 30px 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.08);
+    position: relative;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.sidebar.collapsed {
+    width: 70px;
+    padding: 10px;
+}
+
+.sidebar.collapsed .profile-container h3,
+.sidebar.collapsed .profile-container p,
+.sidebar.collapsed .sidebar-title,
+.sidebar.collapsed .nav-link span {
+    display: none;
+}
+
+.sidebar.collapsed .profile-container {
+    padding: 10px;
+}
+
+.sidebar.collapsed .profile-image {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+/* Adjust main content when sidebar is collapsed */
+.sidebar.collapsed + .main-content {
+    margin-left: 0;
+    width: calc(100% - 70px);
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(https://cs.usk.ac.id/~mhs/pbw_kelompok_6/assets/images/Rectangle\ 20.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid white;
+    margin-bottom: 10px;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sidebar-title {
+    color: white;
+    margin: 15px 10px;
+    font-size: 16px;
+}
+
+.nav-menu {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.nav-item {
+    margin-bottom: 15px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s;
+}
+
+.nav-link img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.nav-link.active {
+    background-color: rgba(255,255,255,0.3);
+    font-weight: bold;
+}
+
+/* Main content styles */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+
+.title span {
+    color: rgba(226, 218, 166, 1);
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav span{
+    color: black;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.nav a.active {
+    color: #26a69a;
+}
+
+/* Add User specific styles */
+.add-user-section {
+    padding: 20px;
+}
+
+.add-user-section h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: black;
+}
+
+.add-user-form {
+    display: flex;
+    gap: 30px;
+}
+
+.user-photo {
+    width: 280px;
+    padding: 20px;
+    background-color: rgba(33, 123, 113, 0.47);
+    border-radius: 30px;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.08);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-photo h3 {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.photo-upload {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.photo-upload img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.edit-photo {
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.form-fields {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    flex: 1;
+    min-width: 200px;
+    background-color: rgba(71, 186, 169, 0.51);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 0 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.3);
+}
+
+.form-group:last-child {
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+.add-button {
+    background-color: #26a69a;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 30px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.add-button:hover {
+    background-color: #00897b;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 992px) {
+    .form-fields {
+        grid-template-columns: 1fr;
+    }
+    
+    .add-user-form {
+        flex-direction: column;
+    }
+    
+    .user-photo {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 70px;
+        padding: 10px;
+    }
+    
+    .profile-container h3,
+    .profile-container p,
+    .sidebar-title,
+    .nav-link span {
+        display: none;
+    }
+    
+    .main-content {
+        margin-left: 70px;
+    }
+}
+}

@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at 70% 30%, rgba(70, 252, 200, 0.8) 0%, rgba(24, 209, 160, 0.9) 40%, rgba(24, 90, 157, 0.8) 100%), 
+                linear-gradient(45deg, rgba(255, 236, 179, 0.3) 0%, rgba(67, 206, 162, 0.5) 50%, rgba(24, 90, 157, 0.4) 100%);
+    background-attachment: fixed;
+    color: #333;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 280px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.1) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 0 30px 30px 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.08);
+    position: relative;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+/* Collapsed sidebar style */
+.sidebar.collapsed {
+    width: 70px;
+    padding: 10px;
+}
+
+.sidebar.collapsed .profile-section,
+.sidebar.collapsed .sidebar-title,
+.sidebar.collapsed .profile-info,
+.sidebar.collapsed .nav-link span {
+    display: none;
+}
+
+.sidebar.collapsed .nav-link {
+    padding: 10px;
+
+}
+
+.sidebar.collapsed .nav-link i {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+
+.profile-section {
+    background-image: url(/assets/images/Rectangle\ 20.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 15px;
+    border: 3px solid white;
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.profile-info p {
+    font-size: 14px;
+    color: #555;
+}
+
+.sidebar-title {
+    color: white;
+    margin: 15px 10px;
+    font-size: 16px;
+}
+
+.nav-menu {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.nav-item {
+    margin-bottom: 15px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s;
+}
+
+.nav-link span {
+    margin-left: 10px;
+}
+
+.nav-link:hover, .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-link i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+}
+
+.nav-link i img {
+    width: 20px;
+    height: 20px;
+}
+
+.kotak{
+    padding: 50px;
+    background-color: rgba(165, 237, 211, 0.96);
+    border-radius: 30px;
+}
+
+/* Toggle button */
+.toggle-sidebar {
+    position: absolute;
+    top: 10px;
+    right: -15px;
+    width: 30px;
+    height: 30px;
+    background-color: #3e866a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+
+/* Main content styles */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+}
+
+.panel-title {
+    font-size: 24px;
+    color: black;
+}
+
+.panel-title span {
+    color: rgba(226, 218, 166, 1);
+}
+
+.header-nav span{
+    color:black
+}
+
+.header-nav {
+    display: flex;
+}
+
+.header-nav a {
+    margin-left: 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+.section-title {
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .sidebar:not(.collapsed) {
+        width: 240px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        border-radius: 0 0 30px 30px;
+        display: none;
+    }
+    
+    .sidebar.show {
+        display: block;
+    }
+    
+    .main-content {
+        padding: 15px;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    .stat-card {
+        flex: 1 0 100%;
+        margin: 0 0 20px 0;
+    }
+
+    .toggle-sidebar {
+        display: none;
+    }
+}
