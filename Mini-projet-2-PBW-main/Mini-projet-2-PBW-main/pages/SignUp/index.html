@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CuanFlow - Sign Up</title>
+    <base href="https://cs.usk.ac.id/~mhs/pbw_kelompok_6/">
+    <link rel="stylesheet" href="css/SignUp/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo-header">
+            <div class="logo">
+                <!-- Replace the URL below with your external logo image URL -->
+                <img src="assets/Logo.png" alt="CuanFlow Logo" class="logo-image" id="logo-image">
+                <div class="logo-text">CuanFlow</div>
+            </div>
+        </div>
+        <div class="left-section">
+            <div class="laptop-container">
+                <img src="assets/Laptop.png" alt="Laptop showing CuanFlow interface" class="laptop-image">
+            </div>
+        </div>
+        
+        <div class="right-section">
+            <div class="welcome-text">
+                <h1>Hello!</h1>
+                <p>We are glad to see you :)</p>
+            </div>
+
+            <div class="social-signup">
+                <button class="google-btn">
+                    <i class="fab fa-google"></i>
+                    Sign up with Google
+                </button>
+                <div class="social-buttons">
+                    <button class="social-btn ">
+                        <i class="fab fa-twitter"></i>
+                    </button>
+                    <button class="social-btn">
+                        <i class="fab fa-facebook-f"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="divider">
+                <span class="or-text">Or</span>
+            </div>
+
+            <form id="signup-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-input" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" class="form-input" placeholder="XXXXXXXX" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="repeat-password">Repeat Password</label>
+                        <input type="password" id="repeat-password" class="form-input" placeholder="XXXXXXXX" required>
+                    </div>
+                </div>
+
+                <div class="terms-checkbox">
+                    <input type="checkbox" id="agree" required>
+                    <label for="agree">I agree Terms of Service and Privacy Policy</label>
+                </div>
+
+                <div class="signup-container">
+                    <button type="submit" class="signup-btn">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/SignUp/script.js"></script>
+</body>
+</html>

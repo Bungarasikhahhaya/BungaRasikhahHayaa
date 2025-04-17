@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User - Admin Dashboard</title>
+    <base href="https://cs.usk.ac.id/~mhs/pbw_kelompok_6/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="css/add-user/styles.css">
+    <script src="js/Add-user/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <button class="toggle-sidebar">
+                <img src="assets/images/navbar/menu.svg" alt="Toggle Sidebar" class="toggle-icon">
+            </button>
+            <div class="profile-container">
+                <div class="profile-image">
+                    <img src="assets/images/image/Firah.png" alt="Profile Image">
+                </div>
+                <h3>Firah Maulida</h3>
+                <p>Firmann@admin.com</p>
+            </div>
+
+            <div class="sidebar-title">Tentang Kami</div>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="pages/Dashboard-Admin/admin.html" class="nav-link">
+                        <i class="fas fa-home"></i>
+                        <span><b>Dashboard</b></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/Add-user/index.html" class="nav-link active">
+                        <i class="fas fa-user"></i>
+                        <span><b>Add User</b></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/List-user/User.html" class="nav-link">
+                        <i class="fas fa-user"></i>
+                        <span><b>List User</b></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/EditProfile/editprofile.html" class="nav-link">
+                        <img src="assets/images/navbar/setting.png" alt="Settings">
+                        <span><b>Pengaturan</b></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="header">
+                <div class="title">Admin <span>Panel</span></div>
+                
+                <div class="nav">
+                    <a href="/~mhs/pbw_kelompok_6/index.html">Home</a>
+                </div>
+            </div>
+            <div class="kotak">
+                <div class="add-user-section">
+                    <h2>Add User</h2>
+                    
+                    <div class="add-user-form">
+                        <div class="user-photo">
+                            <h3>User Photo</h3>
+                            <div class="photo-upload">
+                                <img src="assets/images/image/Mirul.png" alt="User Photo">
+                            </div>
+                            <button class="edit-photo"><b>Edit Foto Profil</b></button>
+                        </div>
+                        
+                    <div class="form-fields">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" placeholder="Bunga Rasikah">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="role">Role</label>
+                            <select id="role">
+                                <option value="user">User</option>
+                                <option value="admin">Admin</option>
+                                <option value="moderator">Moderator</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" placeholder="****************">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="status">Status</label>
+                            <select id="status">
+                                <option value="aktif">Aktif</option>
+                                <option value="nonaktif">Nonaktif</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Bunga.keecee@gmail.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="tanggal">Tanggal Masuk</label>
+                            <input type="text" id="tanggal" placeholder="17-Agustus-1945">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="notelp">No. Telp</label>
+                            <input type="text" id="notelp" placeholder="0812789678900">
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" class="add-button">Tambahkan</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
